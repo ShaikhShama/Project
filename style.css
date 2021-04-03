@@ -1,0 +1,96 @@
+
+body{
+	background-color: #66ffe0;
+}
+
+.navbar-nav{
+	margin-left: 250px;
+
+}
+
+.nav-link{
+	font-size: 18px;
+	color: blue;
+	margin-right: 15px;
+
+}
+
+.nav-link:hover{
+	display: block;
+	background-color: pink; 
+}
+
+.bg-image{
+	background-image: url('Images/bgimage.jpg');
+	height: 80vh;
+	width: 100%;
+	background-repeat: no-repeat;
+}
+
+.a_b{
+	font-size: 50px;
+	color: #e60000;
+	font-style: italic;
+	padding-top: 200px;
+	text-align: center;
+}
+
+#btnn{
+	background-color: red;
+	color: black;
+	font-size: 15px;
+}
+
+h1{
+	text-align: center;
+	padding-top: 10px;
+	color: #e60000;
+}
+
+h5{
+	text-align: center;
+}
+
+h6{
+	text-align: center;
+}
+.show-read-more .more-text{
+        display: none;
+  }
+
+.img_team{
+	width: 20vw;
+	height: 35vh;
+}
+
+.img_blog{
+	width: 40vw;
+	height: 40vh;
+}
+
+.Inc{
+	font-size: 20px;
+}
+
+#email{
+	margin-left: 20vw;	
+	width: 25vw;
+	border-color: black;
+	border-radius: 0;
+	height: 5vh;
+}
+
+.btn{
+	margin-left: 20px;
+	height: 5vh;
+	width: 20vw;
+}
+
+#btnValidate:hover {
+background-color:#adadad;
+border:2px solid #474242
+}
+
+#section1, #section2, #section3, #section4 {
+	cursor: pointer;
+}

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+$(document).ready(function(){
+    var maxLength = 150;
+    $(".show-read-more").each(function(){
+        var myStr = $(this).text();
+        if($.trim(myStr).length > maxLength){
+            var newStr = myStr.substring(0, maxLength);
+            var removedStr = myStr.substring(maxLength, $.trim(myStr).length);
+            $(this).empty().html(newStr);
+            $(this).append(' <a href="javascript:void(0);" class="read-more">read more...</a>');
+            $(this).append('<span class="more-text">' + removedStr + '</span>');
+        }
+    });
+    $(".read-more").click(function(){
+        $(this).siblings(".more-text").contents().unwrap();
+        $(this).remove();
+    });
+});
+</script>
+</head>
+<body onload='document.form1.text1.focus()'>
+	<!---Navigation Bar-->
+<div class="container-fluid">
+	<nav class ="navbar navbar-expand-sm ">
+			<a class ="nav-logo" href ="#"> 
+				<img src="Images/logo.png" style="width:15vw; height:8vh; margin-left: 50px;">
+			</a>
+			<button class="navbar-toggler" id="btnn" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+    			<span class="navbar-toggler-icon">Options</span>
+  			</button>
+ 		    <div class="collapse navbar-collapse" id="collapsibleNavbar">
+   				<ul class="navbar-nav">
+        			<li class="nav-item">
+       			  	  <a class="nav-link" href="#section1">Home</a>
+    			    </li>
+      				<li class="nav-item">
+       					<a class="nav-link" href="#section2">Services</a>
+				    </li>
+				    <li class="nav-item">
+				       <a class="nav-link" href="#section3">Team</a>
+				    </li> 
+				    <li class="nav-item">
+				       <a class="nav-link" href="#section4">Blogs</a>
+				    </li>   
+				 </ul>
+			</div>  
+	</nav>
+</div>
+	<!---Background Image--->
+	<div class="container-fluid bg-image" id="section1">
+		<p class="a_b">Welcome to our FinTech</p>
+	</div>
+	<!--Services-->
+<div class="container-fluid" id="section2">
+		<h1>Services</h1>
+		<br>
+	<div class="row">
+		<div class="col-sm-4">
+			<h3>Service 1</h3>
+			<p class="show-read-more">Brand suppliers are investing in technology partners to streamline their internal processes, build and protect brand compliance and recognition, and manage and enhance content. Because of this trend, working with Content Service Providers (CSPs) with broad supplier adoption can dramatically reduce time-to-market and increase the depth and quality of content retailers receive. </p>
+		</div>
+		<div class="col-sm-4">
+			<h3>Service 2</h3>
+			<p class="show-read-more">The World Wide Web has disrupted many of the traditional relationships between content creators and providers by making it possible for the creators to be providers themselves. Authors now have the option to self-publish their books on Amazon for example rather than approaching a book publisher who may or may not choose to publish their work. YouTube is a platform that acts as a content provider to the people who watch the videos but the people who make the videos are acting as content providers to the public through YouTube. </p>
+		</div>
+		<div class="col-sm-4">
+		<h3>Service 3</h3>
+			<p class="show-read-more">The opportunity associated with IoT represents one of the bright spots for communications service providers who are seeing increasing competition and eroding margins; in many cases it has been identified as a key growth driver. One of our key roles over the last few years has been helping communications service providers navigate the opportunity in IoT. One key part of that support is our yearly IoT CSP report that compares the strategies of major CSPs in IoT, analyzing capabilities and describing best practices. </p>
+	</div>
+</div>	
+
+<!----Team---->
+<div class="container-fluid" id="section3">
+	<h1>Team</h1>
+	<br>
+	<div class="row">
+		<div class="col-sm-3">
+			<img class="img_team" src="Images/team1.jpg" alt="team1">
+			<h5>Julie Bryant</h5>
+			<h6>Customer Service Specialist</h6>
+		</div>
+		<div class="col-sm-3">
+			<img class="img_team" src="Images/team2.jpg" alt="team2">
+			<h5>Alberto Patterson</h5>
+			<h6>Customer Service Supervisor</h6>
+		</div> 
+		<div class="col-sm-3">
+			<img class="img_team" src="Images/team3.jpg" alt="team3">
+			<h5>Luna Evans</h5>
+			<h6>Customer Support Representative</h6>
+		</div>
+		<div class="col-sm-3">
+			<img class="img_team" src="Images/team4.jpg" alt="team4">
+			<h5>Joey Hicks</h5>
+			<h6>Customer Support Manager</h6>
+		</div>
+		
+	</div>
+	
+</div>
+<!---Blogs---->
+<div class="container-fluid" id="section4">
+	<h1>Blogs</h1>
+	<div class="row">
+		<div class="col-sm-6">
+			<img class="img_blog" src="Images/blog1.jpg" alt="Blog1">
+			<br>
+			<p class="Inc">Technical Blog</p>
+			<p class="show-read-more">Say you are writing blog posts about Ruby on Rails, for example, because your business hinges on that technology. Say your post is so high-level and complex that the corporate technician who is reading it, the guy who is interested in buying what you’re selling, doesn’t feel comfortable forwarding it on to his boss. He knows his boss won’t understand all the technical jargon, and he knows that while the blog post was fascinating, it’s not something he can use to convince his boss that he needs to buy what you’re selling.</p>
+		</div>
+		<div class="col-sm-6">
+			<img class="img_blog" src="Images/blog2.jpg" alt="Blog2">
+			<p class="Inc">Graphs and Charts</p>
+			<p class="show-read-more">With this being a major election year, there was plenty of political data to graph. This blog post focuses on an aspect of the election that I hadn't really given much thought to before -- the Primary elections, where each party selects their presidential candidate. Many people complained that they didn't like either of the two candidates that were in the final election (Hillary & Trump) ... but according to this graph, it is quite likely that those people didn't even vote in the Primaries (and therefore it's their own fault!)</p>
+		</div>
+	</div>
+</div>
+<br>
+<!------EmailSubscribe--->
+<div class="container-fluid" >
+	<form name="form1" class="form-inline" action="#" method="post">
+    <div>
+    	<label class="sr-only" for="email">Email:</label>
+      <input type="email" class="form-control" id="email" placeholder="Email address" name="email"  required="required" autocomplete="off" />
+    </div>
+    <button type="submit" id='btn'  class=" btn btn-success" onclick="validate()"/>Subscribe to newsletters</button>
+</form>
+</div>
+<br>
+ <!---CopyRight--->
+<div>
+	<hr style="border: 1px solid black;">
+	<p style="text-align: center;">Copyright(c) 2021 designed by <b>Shaikh Shama Parveen<b></p>
+</div>
+<script src="email-validation.js">	</script>
+</body>
+</html>
